@@ -11,8 +11,8 @@
       import { useToast } from "@/hooks/use-toast";
       import { apiRequest } from "@/lib/queryClient";
 
-      const signupSchema = z.object({
-        organizationName: z.string().min(1, "Organization name is required"),
+      const signupSchema = z.object(
+      { organizationName: z.string().min(1, "Organization name is required"),
         username: z.string().min(3, "Username must be at least 3 characters"),
         password: z.string().min(6, "Password must be at least 6 characters"),
       });
